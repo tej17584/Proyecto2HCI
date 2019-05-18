@@ -28,6 +28,8 @@ app.on('ready',()=> {
         slashes: true
     }));
 
+    mainWindow.maximize();
+
     //Acá jalamos el nuevo menú
     const mainMenu = Menu.buildFromTemplate(templateMenu);
     Menu.setApplicationMenu(mainMenu);
