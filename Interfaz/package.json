@@ -1,0 +1,21 @@
+{
+  "name": "ProyectoHCI2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron index.js",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/weather.icns --prune=true --out=release-builds",
+    "package-win": "electron-packager . ProyectoHCI2 --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/win/weather.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Proyecto HCI Clima\""
+  },
+  "keywords": [],
+  "author": "Alejandro Tejada, Jorge Perez, Rodrigo Samayoa, Diego Sevilla",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^5.0.1",
+    "electron-packager": "^13.1.1",
+    "electron-reload": "^1.4.0",
+    "pg": "^7.11.0",
+    "pg-pool": "^2.0.6"
+  }
+}
