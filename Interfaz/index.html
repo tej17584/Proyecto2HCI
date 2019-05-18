@@ -25,6 +25,18 @@
 
 
 	<body>
+			<script>
+								
+					var hoy = new Date().toDateString();
+					var dia = hoy.getDate();
+					var mes = hoy.getMonth();
+					if(mes < 10){
+						mes = '0' + mes
+					}
+
+					hoy = dia + ' ' + mes;
+				
+				</script>
 		
 		<div class="site-content">
 			<div class="site-header">
@@ -54,6 +66,7 @@
 				</div>
 			</div> <!-- .site-header -->
 
+			<!-- Esto lo comente porque no creo que podamos buscar cosas
 			<div class="hero" data-bg-image="images/banner.png">
 				<div class="container">
 					<form action="#" class="find-location">
@@ -62,69 +75,14 @@
 					</form>
 
 				</div>
-			</div>
+			</div>-->
+
 			<div class="forecast-table">
 				<div class="container">
 					<div class="forecast-container">
-						<div class="today forecast">
-							<div class="forecast-header">
-								<div class="day">Monday</div>
-								<div class="date">6 Oct</div>
-							</div> <!-- .forecast-header -->
-							<div class="forecast-content">
-								<div class="location">Guatemala</div>
-								<div class="degree">
-									<!--AQUI VA LA VARIABLE RECIBIDA DE TEMPERATURA-->
-									<div class="num">23<sup>o</sup>C</div>
-									<div class="forecast-icon">
-										<img src="images/icons/icon-1.svg" alt="" width=90>
-									</div>	
-								</div>
-								<!--LAS DEMAS VARIABLES RECIBIDAS-->
-								<span><img src="images/icon-umberella.png" alt="">20%</span>
-								<span><img src="images/icon-wind.png" alt="">18km/h</span>
-								<span><img src="images/icon-compass.png" alt="">East</span>
-							</div>
-						</div>
 						<div class="forecast">
 							<div class="forecast-header">
-								<div class="day">Tuesday</div>
-							</div> <!-- .forecast-header -->
-							<div class="forecast-content">
-								<div class="forecast-icon">
-									<img src="images/icons/icon-3.svg" alt="" width=48>
-								</div>
-								<div class="degree">23<sup>o</sup>C</div>
-								<small>18<sup>o</sup></small>
-							</div>
-						</div>
-						<div class="forecast">
-							<div class="forecast-header">
-								<div class="day">Wednesday</div>
-							</div> <!-- .forecast-header -->
-							<div class="forecast-content">
-								<div class="forecast-icon">
-									<img src="images/icons/icon-5.svg" alt="" width=48>
-								</div>
-								<div class="degree">23<sup>o</sup>C</div>
-								<small>18<sup>o</sup></small>
-							</div>
-						</div>
-						<div class="forecast">
-							<div class="forecast-header">
-								<div class="day">Thursday</div>
-							</div> <!-- .forecast-header -->
-							<div class="forecast-content">
-								<div class="forecast-icon">
-									<img src="images/icons/icon-7.svg" alt="" width=48>
-								</div>
-								<div class="degree">23<sup>o</sup>C</div>
-								<small>18<sup>o</sup></small>
-							</div>
-						</div>
-						<div class="forecast">
-							<div class="forecast-header">
-								<div class="day">Friday</div>
+								<div class="day">Semana Pasada</div>
 							</div> <!-- .forecast-header -->
 							<div class="forecast-content">
 								<div class="forecast-icon">
@@ -136,7 +94,7 @@
 						</div>
 						<div class="forecast">
 							<div class="forecast-header">
-								<div class="day">Saturday</div>
+								<div class="day">Anteayer</div>
 							</div> <!-- .forecast-header -->
 							<div class="forecast-content">
 								<div class="forecast-icon">
@@ -148,7 +106,7 @@
 						</div>
 						<div class="forecast">
 							<div class="forecast-header">
-								<div class="day">Sunday</div>
+								<div class="day">Ayer</div>
 							</div> <!-- .forecast-header -->
 							<div class="forecast-content">
 								<div class="forecast-icon">
@@ -158,25 +116,44 @@
 								<small>18<sup>o</sup></small>
 							</div>
 						</div>
+						<div class="today forecast">
+								<div class="forecast-header">
+									<div class="day">Hoy</div>
+									<div class="date"></div></div> <!-- .forecast-header -->
+								<div class="forecast-content">
+									<div class="location">Guatemala</div>
+									<div class="degree">
+										<!--AQUI VA LA VARIABLE RECIBIDA DE TEMPERATURA-->
+										<div class="num">23<sup>o</sup>C</div>
+										<div class="forecast-icon">
+											<img src="images/icons/icon-1.svg" alt="" width=90>
+										</div>	
+									</div>
+									<!--LAS DEMAS VARIABLES RECIBIDAS-->
+									<span><img src="images/icon-umberella.png" alt="">20%</span>
+									<span><img src="images/icon-wind.png" alt="">18km/h</span>
+									<span><img src="images/icon-compass.png" alt="">East</span>
+								</div>
+							</div>
 					</div>
 				</div>
 			</div>
 			<main class="main-content">
 				<div class="fullwidth-block">
 					<div class="container">
-						<h2 class="section-title">Live cameras</h2>
+						<h2 class="section-title">Graficas de hoy</h2>
 						<div class="row">
 							<div class="col-md-3 col-sm-6">
 								<div class="live-camera">
 									<figure class="live-camera-cover"><img src="images/live-camera-1.jpg" alt=""></figure>
-									<h3 class="location">New York</h3>
+									<h3 class="location">Temperatura</h3>
 									<small class="date">8 oct, 8:00AM</small>
 								</div>
 							</div>
 							<div class="col-md-3 col-sm-6">
 								<div class="live-camera">
 									<figure class="live-camera-cover"><img src="images/live-camera-2.jpg" alt=""></figure>
-									<h3 class="location">Los Angeles</h3>
+									<h3 class="location">Humedad</h3>
 									<small class="date">8 oct, 8:00AM</small>
 								</div>
 							</div>
