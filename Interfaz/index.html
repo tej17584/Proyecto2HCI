@@ -119,7 +119,11 @@
 						<div class="today forecast">
 								<div class="forecast-header">
 									<div class="day">Hoy</div>
-									<div class="date"></div></div> <!-- .forecast-header -->
+									<div class="date"></div><script>
+											var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+											var f=new Date();
+											document.write(f.getDate() + " de " + meses[f.getMonth()]);
+											</script></div> <!-- .forecast-header -->
 								<div class="forecast-content">
 									<div class="location">Guatemala</div>
 									<div class="degree">
