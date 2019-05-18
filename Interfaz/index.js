@@ -73,7 +73,7 @@ const templateMenu=[
         submenu: [
             {
                 label: 'Opciones',
-                accelerator: 'Ctrl+N',
+                accelerator: 'Ctrl+O',
                 click(){
                     CrearnuevaVentana();
                 }
