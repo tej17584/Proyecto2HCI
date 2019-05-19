@@ -12,10 +12,12 @@
   "author": "Alejandro Tejada, Jorge Perez, Rodrigo Samayoa, Diego Sevilla",
   "license": "ISC",
   "dependencies": {
-    "electron": "^5.0.1",
     "electron-packager": "^13.1.1",
     "electron-reload": "^1.4.0",
     "pg": "^7.11.0",
     "pg-pool": "^2.0.6"
+  },
+  "devDependencies": {
+    "electron": "^5.0.1"
   }
 }
