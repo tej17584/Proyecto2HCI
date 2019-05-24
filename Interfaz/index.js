@@ -54,7 +54,7 @@ function CrearnuevaVentana(){
     //NuevaVentana.setMenu(null);
     //llamamos a la ventadas
     NuevaVentana.loadURL(url.format({
-        pathname:path.join(__dirname,'single.html'),
+        pathname:path.join(__dirname,'index.html'),
         protocol: 'file',
         slashes: true
     }));
