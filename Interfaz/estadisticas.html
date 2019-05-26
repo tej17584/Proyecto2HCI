@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+		
+		<title>Grupo HCI</title>
+
+		<!-- Loading third party fonts -->
+		<link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
+		<link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+		<!-- Loading main css file -->
+		
+		<link rel="stylesheet" href="style.css">
+		
+
+		
+
+		<!--[if lt IE 9]>
+		<script src="js/ie-support/html5.js"></script>
+		<script src="js/ie-support/respond.js"></script>
+		<![endif]-->
+		
+
+	</head>
+
+
+	<body>
+
+		<script >
+			function populate(s,sb){
+				var s = document.getElementById(s);
+				var sb = document.getElementById(sb);
+				sb.innerHTML = "";
+				if(s.value == "2008"){
+					sb.href = "index.html";
+					
+				}else if(s.value == "2009"){
+
+				}
+
+			}
+
+		</script>
+		
+		<div class="site-content">
+			<div class="site-header">
+				<div class="container">
+					<a href="index.html" class="branding">
+						<img src="images/logo.png" alt="" class="logo">
+						<div class="logo-type">
+							<h1 class="site-title">ClimaGT</h1>
+							<small class="site-description">Clima en tiempo Real</small>
+						</div>
+					</a>
+
+					<!-- Default snippet for navigation -->
+					<div class="main-navigation">
+						<button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
+						<ul class="menu">
+							<li class="menu-item"><a href="index.html">Home</a></li>
+							<li class="menu-item"><a href="news.html">Noticias Climáticas</a></li>
+							<li class="menu-item"><a href="https://thingspeak.com/channels/785249/private_show">Clima en Tiempo real</a></li>
+							<li class="menu-item"><a href="photos.html">Fotos</a></li>
+							<li class="menu-item current-menu-item"><a href="estadisticas.html">Estadisticas del clima</a></li>
+							<li class="menu-item"><a href="contact.html">Contáctanos</a></li>
+						</ul> <!-- .menu -->
+					</div> <!-- .main-navigation -->
+					<div class="mobile-navigation"></div>
+
+				</div>
+			</div> <!-- .site-header -->
+
+			<main class="main-content">
+				<div class="container">
+					<div class="breadcrumb">
+						<a href="index.html">Home</a>
+						<span>Estadisticas de Clima</span>
+					</div>
+				</div>
+				
+
+				<div class="fullwidth-block">
+					<div class="container">
+						<div class="row">
+							<div class="content col-md-8">
+								<div class="post single">
+									<h2 class="entry-title">¿Que datos del clima nacional podemos proporcionarle?</h2>
+									<div class="featured-image"><img src="images/volcanesClima.png" alt=""></div>
+									
+									<div class="entry-content">
+										<p>El INSIVUMEH es una institución técnico-científica altamente calificada que contribuye a la optimización de actividades del sector productivo de la República de Guatemala asociadas a las ciencias atmosféricas, geofísicas e hidrológicas, coordinando servicios con el sector privado y actuando como asesor técnico del gobierno en caso de desastres naturales; además planifica, diseña y ejecuta estudios y monitoreos sistematizados en la tecnología  adecuada, enriqueciendo las bases de datos y sistemas de información Geográfica referencial del país, contribuyendo así con la modernización y especialización del sector educativo a todo nivel en el campo de su competencia. </p>
+
+										<blockquote>
+											<p>El INSIVUMEH cuenta con un cuerpo técnico y una estructura administrativa fuertes y dinámicas, con los recursos necesarios y la tecnología adecuada que le permiten ser rentable y participar activamente en el desarrollo del país.</p>
+										</blockquote>
+
+										<p>En la caja de seleccion mostrada a continuacion se encuentran graficos con las estadisticas de temperatura, humedad y presion promedio de los territorios guatemaltecos mas relevantes por año, medidos por estaciones del INSIVUMEH. </p>
+										
+										<div class="sidebar col-md-6 col-md-offset-1">
+											<div class="widget">
+												<label for="anio">Escoja el año que guste: </label>
+												<select id="anio" name="anio" >
+													<option value="0">Seleccione</option>
+													<option value="1">2008</option>
+													<option value="2">2009</option>
+													<option value="3">2010</option>
+													<option value="4">2011</option>
+													<option value="5">2012</option>
+													<option value="6">2013</option>
+													<option value="7">2014</option>
+													<option value="8">2015</option>
+													<option value="9">2016</option>
+													<option value="10">2017</option>
+													<option value="11">2018</option>
+												</select>
+											</div>
+										</div>
+										<div class="sidebar col-md-5 col-md-offset-1">
+											<div class="widget">
+												<button id="sbutton" name="sbutton" onclick="populate('anio','aa')"><a id="aa" name="aa" href="AC2008.html">Mostrar Graficos</a></button>
+											</div>											
+										</div>
+
+									</div>
+
+								</div>
+
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</main> <!-- .main-content -->
+
+			<footer class="site-footer">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-8">
+								<h1>Redes Sociales</h1>
+							</div>
+							<div class="col-md-3 col-md-offset-1">
+								<div class="social-links">
+									<a href="#"><i class="fa fa-facebook"></i></a>
+									<a href="#"><i class="fa fa-twitter"></i></a>
+									<a href="#"><i class="fa fa-google-plus"></i></a>
+									<a href="#"><i class="fa fa-pinterest"></i></a>
+								</div>
+							</div>
+						</div>
+	
+						<p class="colophon">Copyright 2019 Universidad del Valle de Guatemala.</p>
+					</div>
+				</footer> <!-- .site-footer -->
+		</div>
+		
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/plugins.js"></script>
+		<script src="js/app.js"></script>
+		
+	</body>
+
+</html>
