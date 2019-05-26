@@ -35,8 +35,11 @@
 				var r = document.getElementById("region");
 				var a = document.getElementById("aa");
 
-				if(s.value == "1" && r.value == "1"){     //Altiplano central 
-					a.setAttribute('href',"AC2008.html");					
+				if(s.value == "0" || r.value == "0"){     //Altiplano central 
+					a.setAttribute('href',"");	
+
+				}else if(s.value == "1" && r.value == "1"){
+					a.setAttribute('href',"AC2009.html");
 				}else if(s.value == "2" && r.value == "1"){
 					a.setAttribute('href',"AC2009.html");
 				}else if(s.value == "3" && r.value == "1"){
@@ -172,8 +175,7 @@
 					a.setAttribute('href',"peten2017.html");
 				}else if(s.value == "11" && r.value == "6"){
 					a.setAttribute('href',"peten2018.html");
-				}
-								
+				}		
 				return false;
 
 			}
@@ -235,46 +237,55 @@
 										<p>En la caja de seleccion mostrada a continuacion se encuentran graficos con las estadisticas de temperatura, humedad y presion promedio de los territorios guatemaltecos mas relevantes por año, medidos por estaciones del INSIVUMEH. </p>
 										
 										<!--Combobox con los años, no funciona la funcion que deberia cambiar el link del anchor element de abajo.-->
-										<div class="sidebar col-md-6 col-md-offset-1">
-											<div class="widget">
-												<label for="anio">Escoja el año que guste: </label>
-												<select id="anio" name="anio" onchange="changeHref() ">
-													<option value="0">Seleccione</option>
-													<option value="1">2008</option>
-													<option value="2">2009</option>
-													<option value="3">2010</option>
-													<option value="4">2011</option>
-													<option value="5">2012</option>
-													<option value="6">2013</option>
-													<option value="7">2014</option>
-													<option value="8">2015</option>
-													<option value="9">2016</option>
-													<option value="10">2017</option>
-													<option value="11">2018</option>
-												</select>
+										<div class="fullwidth-block">
+											<div class="container">
+												<div class="filter">
+													<div class="count filter-control">
+														<label for="anio">Escoja el año que guste: </label>
+														<span class="select control">
+															<select id="anio" name="anio" onchange="changeHref() ">
+																<option value="0">Seleccione</option>
+																<option value="1">2008</option>
+																<option value="2">2009</option>
+																<option value="3">2010</option>
+																<option value="4">2011</option>
+																<option value="5">2012</option>
+																<option value="6">2013</option>
+																<option value="7">2014</option>
+																<option value="8">2015</option>
+																<option value="9">2016</option>
+																<option value="10">2017</option>
+																<option value="11">2018</option>
+															</select>
+														</span>
+													</div>
+													<div class="count filter-control">
+														<label for="region">Escoja la region: </label>
+														<span class="select control">
+															<select id="region" name="region" onchange="changeHref() " >
+																<option value="0">Seleccione</option>
+																<option value="1">Altiplano Central</option>
+																<option value="2">Boca Costa</option>
+																<option value="3">Caribe</option>
+																<option value="4">Occidente</option>
+																<option value="5">Pacifico</option>
+																<option value="6">Peten</option>
+															</select>
+														</span>
+													</div>													
+												</div>
+												<div class="sidebar col-md-2 ">
+													<div class="widget">
+														<a  id="aa" name="aa" >Mostrar Graficos</a> <!--Este anchor element--> 
+													</div>											
+												</div>
 											</div>
 										</div>
+									
+									
 										<!--Combobox con las regiones-->
-										<div class="sidebar col-md-6 col-md-offset-1">
-											<div class="widget">
-												<label for="region">Escoja la region: </label>
-												<select id="region" name="region" onchange="changeHref() ">
-													<option value="0">Seleccione</option>
-													<option value="1">Altiplano Central</option>
-													<option value="2">Boca Costa</option>
-													<option value="3">Caribe</option>
-													<option value="4">Occidente</option>
-													<option value="5">Pacifico</option>
-													<option value="6">Peten</option>
-												</select>
-											</div>
-										</div>
-
-										<div class="sidebar col-md-3 ">
-											<div class="widget">
-												<a  id="aa" name="aa" >Mostrar Graficos</a> <!--Este anchor element--> 
-											</div>											
-										</div>										
+										
+																				
 										
 									</div>
 
