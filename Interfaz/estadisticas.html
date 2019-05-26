@@ -5,7 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
 		
-		<title>Grupo HCI</title>
+		<title>Estadisticas del Clima</title>
 
 		<!-- Loading third party fonts -->
 		<link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
@@ -29,17 +29,40 @@
 
 	<body>
 
-		<script >
-			function populate(s,sb){
-				var s = document.getElementById(s);
-				var sb = document.getElementById(sb);
-				sb.innerHTML = "";
-				if(s.value == "2008"){
-					sb.href = "index.html";
-					
-				}else if(s.value == "2009"){
+		<script type="text/javascript">
+			function changeHref(){
+				var s = document.getElementById("anio");
+				var r = document.getElementById("region");
+				var a = document.getElementById("aa");
 
+				if(s.value == "2008" && r.value == "Altiplano Central"){
+					//a.href="AC2008.html";
+					a.setAttribute('href',"AC2008.html");					
+				}else if(s.value == "2009" && r.value == "Altiplano Central"){
+					//a.href="AC2009.html";
+					a.setAttribute('href',"AC2009.html");
+				}else if(s.value == "2010" && r.value == "Altiplano Central"){
+					a.setAttribute('href',"AC2010.html");
+				}else if(s.value == "2011" && r.value == "Altiplano Central"){
+					a.setAttribute('href',"AC2011.html");
+				}else if(s.value == "2012" && r.value == "Altiplano Central"){
+					a.setAttribute('href',"AC2012.html");
+				}else if(s.value == "2013" && r.value == "Altiplano Central"){
+					a.setAttribute('href',"AC2013.html");
+				}else if(s.value == "2014" && r.value == "Altiplano Central"){
+					a.setAttribute('href',"AC2014.html");
+				}else if(s.value == "2015" && r.value == "Altiplano Central"){
+					a.setAttribute('href',"AC2015.html");
+				}else if(s.value == "2016" && r.value == "Altiplano Central"){
+					a.setAttribute('href',"AC2016.html");
+				}else if(s.value == "2017" && r.value == "Altiplano Central"){
+					a.setAttribute('href',"AC2017.html");
+				}else if(s.value == "2018" && r.value == "Altiplano Central"){
+					a.setAttribute('href',"AC2018.html");
 				}
+				
+				return false;
+
 
 			}
 
@@ -99,10 +122,11 @@
 
 										<p>En la caja de seleccion mostrada a continuacion se encuentran graficos con las estadisticas de temperatura, humedad y presion promedio de los territorios guatemaltecos mas relevantes por año, medidos por estaciones del INSIVUMEH. </p>
 										
+										<!--Combobox con los años, no funciona la funcion que deberia cambiar el link del anchor element de abajo.-->
 										<div class="sidebar col-md-6 col-md-offset-1">
 											<div class="widget">
 												<label for="anio">Escoja el año que guste: </label>
-												<select id="anio" name="anio" >
+												<select id="anio" name="anio" onchange="changeHref() ">
 													<option value="0">Seleccione</option>
 													<option value="1">2008</option>
 													<option value="2">2009</option>
@@ -118,11 +142,127 @@
 												</select>
 											</div>
 										</div>
-										<div class="sidebar col-md-5 col-md-offset-1">
+										<!--Combobox con las regiones-->
+										<div class="sidebar col-md-6 col-md-offset-1">
 											<div class="widget">
-												<button id="sbutton" name="sbutton" onclick="populate('anio','aa')"><a id="aa" name="aa" href="AC2008.html">Mostrar Graficos</a></button>
+												<label for="region">Escoja la region: </label>
+												<select id="region" name="region" onchange="changeHref() ">
+													<option value="0">Seleccione</option>
+													<option value="1">Altiplano Central</option>
+													<option value="2">Boca Costa</option>
+													<option value="3">Caribe</option>
+													<option value="4">Occidente</option>
+													<option value="5">Pacifico</option>
+													<option value="6">Peten</option>
+												</select>
+											</div>
+										</div>
+
+										<div class="sidebar col-md-3 ">
+											<div class="widget">
+												<a  id="aa" name="aa" href="#" >Mostrar Graficos</a> <!--Este anchor element--> 
 											</div>											
 										</div>
+										
+										<!--Anchors redireccionando cada uno a los htmls.-->
+										
+										<div class="sidebar col-md-3 ">	
+											<h3>Altiplano Central</h3>										
+											<div class="widget">
+												<a href="AC2008.html" >Graficos del 2008</a>
+												<a href="AC2009.html" >Graficos del 2009</a> 
+												<a href="AC2010.html" >Graficos del 2010</a> 
+												<a href="AC2011.html" >Graficos del 2011</a> 
+												<a href="AC2012.html" >Graficos del 2012</a> 
+												<a href="AC2013.html" >Graficos del 2013</a> 
+												<a href="AC2014.html" >Graficos del 2014</a> 
+												<a href="AC2015.html" >Graficos del 2015</a>
+												<a href="AC2016.html" >Graficos del 2016</a> 
+												<a href="AC2017.html" >Graficos del 2017</a> 
+												<a href="AC2018.html" >Graficos del 2018</a>  
+											</div>									
+										</div>
+										<div class="sidebar col-md-3 ">	
+											<h3>Boca Costa</h3>										
+											<div class="widget">
+													<a href="BC2008.html" >Graficos del 2008</a>
+													<a href="BC2009.html" >Graficos del 2009</a> 
+													<a href="BC2010.html" >Graficos del 2010</a> 
+													<a href="BC2011.html" >Graficos del 2011</a> 
+													<a href="BC2012.html" >Graficos del 2012</a> 
+													<a href="BC2013.html" >Graficos del 2013</a> 
+													<a href="BC2014.html" >Graficos del 2014</a> 
+													<a href="BC2015.html" >Graficos del 2015</a>
+													<a href="BC2016.html" >Graficos del 2016</a> 
+													<a href="BC2017.html" >Graficos del 2017</a> 
+													<a href="BC2018.html" >Graficos del 2018</a>  
+											</div>									
+										</div>
+										<div class="sidebar col-md-3 ">	
+											<h3>Caribe</h3>										
+											<div class="widget">
+													<a href="C2008.html" >Graficos del 2008</a>
+													<a href="C2009.html" >Graficos del 2009</a> 
+													<a href="C2010.html" >Graficos del 2010</a> 
+													<a href="C2011.html" >Graficos del 2011</a> 
+													<a href="C2012.html" >Graficos del 2012</a> 
+													<a href="C2013.html" >Graficos del 2013</a> 
+													<a href="C2014.html" >Graficos del 2014</a> 
+													<a href="C2015.html" >Graficos del 2015</a>
+													<a href="C2016.html" >Graficos del 2016</a> 
+													<a href="C2017.html" >Graficos del 2017</a> 
+													<a href="C2018.html" >Graficos del 2018</a>  
+											</div>
+										</div>
+										<div class="sidebar col-md-3 ">	
+											<h3>Occidente</h3>										
+											<div class="widget">
+													<a href="O2008.html" >Graficos del 2008</a>
+													<a href="O2009.html" >Graficos del 2009</a> 
+													<a href="O2010.html" >Graficos del 2010</a> 
+													<a href="O2011.html" >Graficos del 2011</a> 
+													<a href="O2012.html" >Graficos del 2012</a> 
+													<a href="O2013.html" >Graficos del 2013</a> 
+													<a href="O2014.html" >Graficos del 2014</a> 
+													<a href="O2015.html" >Graficos del 2015</a>
+													<a href="O2016.html" >Graficos del 2016</a> 
+													<a href="O2017.html" >Graficos del 2017</a> 
+													<a href="O2018.html" >Graficos del 2018</a>  
+											</div>									
+										</div>
+										<div class="sidebar col-md-3 ">	
+											<h3>Pacifico</h3>										
+											<div class="widget">
+													<a href="P2008.html" >Graficos del 2008</a>
+													<a href="P2009.html" >Graficos del 2009</a> 
+													<a href="P2010.html" >Graficos del 2010</a> 
+													<a href="P2011.html" >Graficos del 2011</a> 
+													<a href="P2012.html" >Graficos del 2012</a> 
+													<a href="P2013.html" >Graficos del 2013</a> 
+													<a href="P2014.html" >Graficos del 2014</a> 
+													<a href="P2015.html" >Graficos del 2015</a>
+													<a href="P2016.html" >Graficos del 2016</a> 
+													<a href="P2017.html" >Graficos del 2017</a> 
+													<a href="P2018.html" >Graficos del 2018</a>  
+											</div>									
+										</div>
+										<div class="sidebar col-md-3 ">	
+											<h3>Peten</h3>										
+											<div class="widget">
+													<a href="PT2008.html" >Graficos del 2008</a>
+													<a href="PT2009.html" >Graficos del 2009</a> 
+													<a href="PT2010.html" >Graficos del 2010</a> 
+													<a href="PT2011.html" >Graficos del 2011</a> 
+													<a href="PT2012.html" >Graficos del 2012</a> 
+													<a href="PT2013.html" >Graficos del 2013</a> 
+													<a href="PT2014.html" >Graficos del 2014</a> 
+													<a href="PT2015.html" >Graficos del 2015</a>
+													<a href="PT2016.html" >Graficos del 2016</a> 
+													<a href="PT2017.html" >Graficos del 2017</a> 
+													<a href="PT2018.html" >Graficos del 2018</a>  
+											</div>									
+										</div>
+											
 
 									</div>
 
