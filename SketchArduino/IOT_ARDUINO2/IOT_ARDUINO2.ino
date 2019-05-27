@@ -3,7 +3,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #define DHTPIN 2 // what pin we’re connected to
-String apiKey = "1Q7KWC86R0IYENQX"; //API key from ThingSpeak channel
+String apiKey = "GKXH4Z1V9FP8RO0A"; //API key from ThingSpeak channel
 const char* ssid = "Xperia"; //SSID of your wifi
 const char* password = "momazo44"; //password of your wifi
 int duration=5;//delay between each data measure and uploading
